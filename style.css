@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* 💖 Fondo animado con degradado */
+body {
+    background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff92a5, #ffb3c6);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 💕 Animación del fondo degradado */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 📩 Contenedor del chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+}
+
+/* 💬 Mensajes del chat */
+.message {
+    background: rgba(51, 51, 51, 0.9);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 90%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+/* ⌨️ Animación de mensaje escribiéndose */
+.typing {
+    font-style: italic;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+/* 🎇 Efecto de aparición de la pregunta final */
+.final-message {
+    font-size: 1.2em;
+    color: #ffcc00;
+    transform: scale(0);
+    animation: pop-in 0.8s ease-out forwards;
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+/* ❤️ Corazones flotando */
+.heart {
+    position: fixed;
+    font-size: 2rem;
+    color: #ff4d6d;
+    animation: float 5s linear infinite;
+    opacity: 0;
+}
+
+/* 💘 Animación de los corazones */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}

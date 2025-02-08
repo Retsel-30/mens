@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Perdido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🎵 Sonidos -->
+    <audio id="messageSound" src="https://www.fesliyanstudios.com/play-mp3/387"></audio> <!-- Sonido de mensaje -->
+    <audio id="finalSound" src="https://www.fesliyanstudios.com/play-mp3/5486"></audio> <!-- Sonido final -->
+
+    <div class="chat-container" onclick="enableAudio()">  <!-- Clic para habilitar audio -->
+        <div class="message fade-in" id="introMessage">📡 Buscando mensajes no entregados...</div>
+        <div class="message hidden" id="initialMessage">📩 Mensaje enviado hace 3 días... parece que nunca llegó.</div>
+        <div class="message typing hidden" id="typingEffect">⌛ Cargando mensaje...</div>
+        <div class="message final-message hidden" id="finalMessage">💌 ¿Quieres ser mi San Valentín? 💖</div>
+    </div>
+
+    <div id="heart-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
